@@ -1,12 +1,24 @@
-const plus = document.getElementById("add")
-const minus = document.getElementById("minus")
-const number = document.querySelector("span")
+const plus = document.getElementById("add");
+const minus = document.getElementById("minus");
+const number = document.querySelector("span");
 
-let count = 0
+let count = 0;
 
-const handleAdd = () => {}
+number.innerText = count;
 
-const handleMinus = () => {}
+const updateText = () => {
+  number.innerText = count;
+};
 
-plus.addEventListener("click", handleAdd)
-minus.addEventListener("click", handleMinus)
+const handleAdd = () => {
+  count = count + 1;
+  updateText();
+};
+
+const handleMinus = () => {
+  count = count - 1;
+  updateText();
+};
+
+plus.addEventListener("click", handleAdd);
+minus.addEventListener("click", handleMinus);
